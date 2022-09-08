@@ -7,7 +7,7 @@
 }
 
 html {
-    font-family: font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 100%;
 }
 
@@ -30,7 +30,47 @@ img {
 
 .flex-wrap {
     flex-wrap: wrap;
-    align-content: stretch;
+    align-content: flex-start;
+}
+
+/* Icons */
+.icon-container {
+    /* display: flex; */
+    display: inline-block;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+
+    height: 100%;
+    width: 60px;
+
+    padding-top: 5px;
+
+    text-align: center;
+}
+
+.icon-container .icon {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+
+    font-size: 2rem;
+}
+
+.icon-container .caption {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+
+    font-size: 1rem;
+}
+
+.icon-container .icon-only {
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+
+    font-size: 1rem;
 }
 
 /* MAIN */
@@ -50,6 +90,7 @@ main {
 
     padding: 50px 75px 20px;
 
+    overflow: auto;
     /* DEBUG */
     background-color: blue;
 }
@@ -60,7 +101,9 @@ main {
 }
 
 .col {
+    position: relative;
     width: calc(100% / 7 - 6px);
+    max-height: 200px;
 
     margin: 3px;
     
@@ -68,29 +111,56 @@ main {
     /* width: 200px;
     height: 100px; */
     
-    align-content:space-between ;
+    /* align-content:space-between ; */
     background-color: aquamarine;
-    padding: 0.2em;
+    /* padding: 0.2em; */
 }
 
 .card {
 }
 
+.col img{
+    display: block;
+    /* position: absolute; */
+}
+
+.col .user-mic-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-size: 0.9rem;
+    padding: 0.2em;
+    color:#ffffff;
+    background-color: #99999988;
+
+    z-index: 1;
+}
+
 /* View Settings */
 .view-settings {
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: 5px;
+    right: 5px;
+}
 
-    /* DEBUG */
+.view-settings span {
+    display: inline-block;
+    
+    margin-left: 5px;
+    padding: 4px;
+    border-radius: 5px; 
+
     color: #ffffff;
-    background-color: #4a4a4a;
+    background-color: #99999988;
 }
 
 /* Toolbar */
 .toolbar {
     width: 100%;
     height: 70px;
+
+    color:#ffffff;
 
     /* DEBUG */
     background-color: #222222;
@@ -100,8 +170,16 @@ main {
     height: 100%;
 
     /* DEBUG */
-    width: 100px;
+    /* width: 100px; */
 }
+
+/* .audio-video-set .audio-set {
+    display: inline-block;
+}
+
+.audio-video-set .video-set {
+    display: inline-block;
+} */
 
 .main-tools {
     height: 100%;
