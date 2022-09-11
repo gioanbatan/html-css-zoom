@@ -1,5 +1,4 @@
 /* RESET */
-
 * {
     margin: 0;
     padding: 0;
@@ -40,42 +39,8 @@ img {
     transform: translate(-50%, -50%);
 }
 
-/* Icons */
-.icon-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    height: 100%;
-    width: 60px;
-
-    padding-top: 5px;
-
-    text-align: center;
-}
-
-.icon-container .icon {
-    position: relative;
-
-    width: 100%;
-    height: 70%;
-
-    font-size: 2rem;
-}
-
-.icon-container .caption {
-    width: 100%;
-    height: 30%;
-
-    font-size: 1rem;
-}
-
-.icon-container .icon-only {
-    width: 100%;
-    height: 65px;
-    line-height: 65px;
-
-    font-size: 1rem;
+.green {
+    color: #00ff00;
 }
 
 /* MAIN */
@@ -139,7 +104,7 @@ main {
     color:#ffffff;
     background-color: #99999988;
 
-    z-index: 1;
+    z-index: 1;  
 }
 
 /* View Settings */
@@ -162,6 +127,9 @@ main {
 
 /* Toolbar */
 .toolbar {
+    position: relative;
+    /* justify-content: space-between; */
+
     width: 100%;
     height: 70px;
 
@@ -172,32 +140,64 @@ main {
 }
 
 .audio-video-set {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1em;
+
+    width: 20%;
     height: 100%;
-
-    /* DEBUG */
-    /* width: 100px; */
 }
-
-/* .audio-video-set .audio-set {
-    display: inline-block;
-}
-
-.audio-video-set .video-set {
-    display: inline-block;
-} */
 
 .main-tools {
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 
-    /* DEBUG */
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+    height: 100%;
 }
 
 .end-call {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    padding: 0 1em;
+
+    color: #ff0000;
+    background-color: #4a4a4a;
+}
+/* Icons */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
     height: 100%;
 
-    background-color: #4a4a4a;
-
-    /* DEBUG */
-    width: 100px;
+    padding: 5px 5px;
 }
+
+.icon-container .icon {
+    font-size: 2rem;
+}
+
+.icon-container .caption {
+    font-size: 1rem;
+}
+
+.icon-container .icon-only {
+    font-size: 1rem;
+}
+
